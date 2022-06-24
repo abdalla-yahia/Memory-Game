@@ -5,8 +5,12 @@ let Score = document.querySelector(".score .sc");
 let counter = document.querySelector(".counter");
 let restart = document.querySelector("button.restart");
 let best_score = document.querySelector(".best_score");
+
+//The letter on the back of the box will be chosen randomly
 let arr = ["A", "B", "C", "D", "E", "F", "G", "H"];
+//A set of colors will be chosen randomly
 let color = ["#2196f3", "#673ab7", "blue", "#009688", "green", "#e91e63", "violet", "gray"];
+//The Counter  will include the letters 
 let coun = [];
 coun.push(...dontRebeat())
 coun.push(...dontRebeat());
@@ -55,29 +59,34 @@ face_front.forEach((e) => {
             break;
     }
 })
-
+// Function To Chose The Letters Randomly
 function dontRebeat() {
-let newArr = [];
-for (let i = 0; i < arr.length; i++){
-    for (let j = 0; j < 5; j++){
-        if (newArr[j] !== arr[Math.floor(Math.random() * arr.length)]) {
-            newArr.push(arr[Math.floor(Math.random()* arr.length)]);
-        } else {
-            continue;
+
+    let newArr = [];
+    
+    for (let i = 0; i < arr.length; i++){
+        for (let j = 0; j < 5; j++){
+            if (newArr[j] !== arr[Math.floor(Math.random() * arr.length)]) {
+                newArr.push(arr[Math.floor(Math.random()* arr.length)]);
+            } else {
+                continue;
+            }
         }
     }
-}
-    let set = new Set(newArr);
-    if (set.size < 8) {
-        window.location.reload()
-    }
-    let NEWSET = Array.from(set)
-    return NEWSET;
-}
 
+        let set = new Set(newArr);
+        if (set.size < 8) {
+            window.location.reload()
+    }
+    
+    let Final_result = Array.from(set)
+    
+    return Final_result;
+}
+//The  Event Click Of The Box 
 Box.forEach(function (e) {
     e.addEventListener("click", function () {
-        this.style.prentevent = "none";
+
         this.classList.add("active")
         this.style.transform = "rotateY(180deg)";
         
@@ -102,7 +111,7 @@ Box.forEach(function (e) {
                     e.classList.remove("active")
                     window.localStorage.clear();
                 })
-            },1000)
+            },400)
             }
         } else {
         
@@ -126,7 +135,6 @@ let before = document.querySelector(".before");
 SelTi.addEventListener("change", function () {
     Time.innerHTML = SelTi.value;
     start.style.display = "block";
-   
 })
 
 
