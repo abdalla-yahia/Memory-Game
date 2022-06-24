@@ -8,57 +8,66 @@ body{
     background-color: rgba(83, 77, 77, 0.418);
     display: flex;
     justify-content: center;
+    width: 100%;
+    height: 80%;
+}
+.container{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    margin: 20px auto;
     flex-direction: column;
 }
 .hed{
     margin-top: 10px;
-    width: 700px;
-    height: 70px;
-    background-color: #eee;
+    width: 100%;
+    height: 10%;
+    background-color: rgb(112, 18, 18);
     display: flex;
-        justify-content: space-around;
-        align-items: center;
+    justify-content: space-around;
+    align-items: center;
 }
 .hed #ti{
-    width: 150px;
+    width: calc(80% / 5);
     border: none;
     text-align: center;
     outline: none;
     background-color: aquamarine;
-    font-size: 30px;
+    font-size: 1.5rem;
     color:rgb(255, 11, 174);
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(13, 44, 13, 0.5);
 }
 .time{
-    width: 150px;
-    height: 70px;
+    width: calc(80% / 5);;
+    height: 90%;
     background-color: blueviolet;
     color: red;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 40px;
+    font-size: 1.5rem;
     flex-direction: column;
     border-radius: 10px;
 }
 .score{
-    width: 150px;
-        height: 70px;
-        background-color: blueviolet;
-        color: rgb(0, 255, 0);
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: column;
-        font-size: 40px;
-        border-radius: 10px;
+    width: calc(80% / 5);
+    height: 90%;
+    background-color: blueviolet;
+    color: rgb(0, 255, 0);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+    border-radius: 10px;
 }
 
 .restart{
-    width: 70px;
-    height: 50px;
+    width: calc(80% / 5);
+    height: 30px;
     border: none;
     outline: none;
     background-color: #03a9f4;
@@ -68,8 +77,8 @@ body{
     border-radius: 10px;
 }
 .best_score{
-    width: 70px;
-    height: 50px;
+    width: calc(80% / 5);
+    height: 90%;
     border: none;
     outline: none;
     background-color: #03f4b8;
@@ -81,46 +90,46 @@ body{
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    font-size: 25px;
+    font-size: 1.5rem;
 }
 .sp
 {
     width: 100%;
-    height: 30px;
+    height: 90%;
     background-color: aqua;
-    font-size: 25px;
+    font-size: 1.5rem;
     text-align: center;
     color: black;
 }
 .start{
-    width: 500px;
+    width: 80%;
     height: 50px;
     border: none;
     outline: none;
     font-size: 20px;
     color: rgb(228, 0, 0);
-    background-color: #03a9f4;
+    background-color: #073b53;
     box-shadow: 5px 5px 5px rgba(83, 77, 77, 0.418);
     cursor: pointer;
     display: none;
 }
 .counter{
-    width: 700px;
-    height: calc(100vh - 150px);
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: rgb(44, 43, 43);
+    background-color: rgb(148, 145, 145);
     margin-top: 5px;
-    margin-bottom: 40px;
-    padding: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    height:80vh;
     position: relative;
 }
 .counter .after {
     position: absolute;
     color: wheat;
-    font-size: 80px;
+    font-size: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,7 +139,7 @@ body{
 .counter .before {
     position: absolute;
     color: wheat;
-    font-size: 80px;
+    font-size: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,33 +148,33 @@ body{
     text-align: center;
 }
 .counter .box{
-    width: 150px;
-    height: 110px;
+    width: calc(100% / 5);
+    height: calc(100% / 5);
     margin-left: 5px;
     transform-style: preserve-3d;
     backface-visibility: hidden;
     transition: .5s;
-    background-color: aqua;
     position: relative;
     cursor: pointer;
     display: none;
+
 }
 .box .face{
-    width: 150px;
-    height: 110px;
-    background-color: blue;
+    width: calc(100% / 4);
+    height: calc(100% / 4);
+
 }
 .face.front {
     background-color: brown;
-    width: 150px;
-    height: 110px;
+    width: 98%;
+    height:98%;
     position: absolute;
     transform: rotateY(180deg);
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 115px;
+    font-size: 5rem;
     font-weight: 800;
 
 }
@@ -175,8 +184,8 @@ body{
     width: 100%;
     height: 100%;
     background-image: url("./d\ \(1\).jpeg");
-    background-size: contain;
-    background-position: center;
+    background-size: cover;
+    background-position: top;
 }
 .box.remove{
     visibility: hidden;
